@@ -1,0 +1,639 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+    font-family: "Ropa Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5;
+	-webkit-overflow-scrolling: touch;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+	
+}
+body {
+    -webkit-font-smoothing: antialiased;/*マックに対して　少し文字が太くなる使用をなくす*/
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "palt";   /*字詰め*/
+	-webkit-overflow-scrolling: touch;
+}
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+ul {
+    padding-left: 0;
+}
+ul li {
+    list-style-type: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+.body {
+	overflow: hidden;
+	
+}
+.font {
+    font-family: ta-f1blockline, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.center {
+    text-align: center;
+}
+.centerpo {
+    position: relative;
+}
+.none {
+    display: none;
+}
+.img_neon {
+    height: 15vh;
+    width: 25vw;
+    position: absolute;
+    left: 80%;
+    top: -25%;
+}
+
+.copylight{
+	color: rgba(255,103,23,1.00);
+    position: absolute;
+    bottom: 0px;
+	font-size: 1vw;
+	    right: 0px;
+}
+
+
+.bar{
+	font-family: ta-f1blockline, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255,103,23,1.00);
+    position: absolute;
+    bottom: 2vh;
+	left: 2vw;
+    font-size: 1.2vw;
+	animation: neonBlink 2s infinite;
+}
+
+
+
+
+/*
+*/
+/*スマホ*/
+
+@media screen and (max-width: 768px) {
+	
+	.bar{
+	font-family: ta-f1blockline, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255,103,23,1.00);
+    position: absolute;
+    bottom: 2vh;
+	left: 50%;
+		
+		-webkit-transform: translate(-50%,-50%);
+-moz-transform: translate(-50%,-50%);
+-ms-transform: translate(-50%,-50%);
+-o-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+    font-size: 2vw;
+	animation: neonBlink 2s infinite;
+	
+}
+	
+	.none{
+		display: none;
+	}	
+	.pc_none{
+		display: inherit;
+	}
+	
+/*mark*/
+	.pc_none{
+    position: relative;
+    top: 25%;
+    left: 29%;
+	animation: neonBlur 16s infinite;
+	}
+	
+	
+	.pc_none div{
+		position: absolute;
+	}
+	
+	.pc_none div:nth-child(1){
+		animation: neonBlink 6s infinite;
+	}
+	.pc_none div:nth-child(2){
+		animation: neonBlink 8s infinite;
+	}
+	.pc_none div:nth-child(3){
+		animation: neonBlink 10s infinite;
+	}
+	
+.submit_box {
+    position: absolute;
+/*    z-index: 999;*/
+    top: 50%;
+    right: 15%;
+    animation: neonBlur 16s infinite;
+}
+.block {
+    display: block;
+    width: 70vw;
+    background-color: transparent;
+    border-style: solid;
+    border-color: rgba(255,103,23,1.00);
+    border-width: 0px 0px 3px 0px;
+    color: rgba(0,255,0,1.00);
+/*    animation: neonBlur 16s infinite;*/
+    margin-bottom: 30px;
+}
+.submit {
+    background-color: transparent;
+    border-style: solid;
+    border-color: rgba(255,103,23,1.00);
+    border-width: 3px 3px 3px 3px;
+    color: rgba(255,103,23,1.00);
+    font-size: 2rem;
+    width: 20vw;
+    margin: 0 35% 0 35%;
+    animation: neonBlink 7s infinite;
+}
+/*ボタン*/
+.btn-flat-double-border {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: double 4px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+.btn-flat-double-border:hover {
+    background: #fffbef;
+}
+.link {
+    text-align: center;
+    position: absolute;
+    bottom: 12%;
+    right: 20%;
+    left: 20%;
+    animation: neonBlink 1s infinite;
+	z-index: 2;
+/*	position: fixed*/
+}
+/*show.php	*/
+
+.opacity {
+/*    position: absolute;*/
+    top: 30%;
+    opacity: 0.6;
+    right: 48%;
+    left: 16%;
+    z-index: -999;
+    padding-top: 0vh;
+/*    display: flex;*/
+	position: fixed;
+}
+.text_head {
+    font-size: 2vh;
+    color: #fb8b24;
+    text-shadow: 0 0 50px #fb8b24;
+    margin: 4.5vw 4.5vw 0vw 4.5vw;
+}
+.text_head:after {
+    content: attr(data-text);
+    z-index: -1;
+    color: #fb8b24;
+    filter: blur(15px);
+}
+.text_head:before {
+    content: '';
+    background: #fb8b24;
+    z-index: -2;
+    opacity: .3;
+    filter: blur(50px);
+}
+.neon {
+    font-size: 2vh;
+    color: rgba(0,255,0,1.00);
+    text-shadow: 0 0 50px rgba(0,255,0,1.00);
+    margin: 1vw 8vw 5vw;
+}
+.neon:after {
+    content: attr(data-text);
+    z-index: -1;
+    color: rgba(0,255,0,1.00);
+    filter: blur(15px);
+}
+.neon:before {
+    content: '';
+    background: rgba(0,255,0,1.00);
+    z-index: -2;
+    opacity: .3;
+    filter: blur(50px);
+}
+
+.link_box {
+
+    display: flex;
+    /* right: 7%; */
+    /* left: 20%; */
+    /* text-align: center; */
+/*    font-size: 1.5vw;*/
+    margin-bottom: 40px;
+    /* margin-left: 17%; */
+    /* margin-right: -5%; */
+    /* text-align: center; */
+	justify-content: center;
+	
+}
+.link_box p {
+    margin-right: 2vw;
+    margin-left: 2vw;
+	
+}
+.link_box p{
+    animation: neonBlink 5s infinite;
+}
+.link_box .seconnd{
+    animation: neonBlink 7s infinite;
+}
+@media screen and (orientation: landscape){
+	.pc_none{
+    display: none;
+
+	}
+		
+		.link{
+    text-align: center;
+    position: absolute;
+    bottom: 12%;
+    right: 5%;
+    animation: neonBlink 1s infinite;
+    z-index: 5;
+    left: 67%;
+			font-size: 2vw;
+		}		
+}
+}
+@media screen and (max-width: 320px) {
+	.pc_none{
+	position: relative;
+    top: 25%;
+    left: 26%;
+	}
+}
+
+
+/*PC*/
+@media screen and (min-width: 768px) {
+	
+	.pc_none{
+		display: none;
+	}
+	
+	.none{
+		display: inherit;
+	}	
+	
+.submit_box {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    right: 15%;
+    animation: neonBlur 16s infinite;
+}
+.block {
+    display: block;
+    width: 70vw;
+    background-color: transparent;
+    border-style: solid;
+    border-color: rgba(255,103,23,1.00);
+    border-width: 0px 0px 3px 0px;
+    color: rgba(0,255,0,1.00);
+/*    animation: neonBlur 16s infinite;*/
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+.submit {
+    background-color: transparent;
+    border-style: solid;
+    border-color: rgba(255,103,23,1.00);
+    border-width: 3px 3px 3px 3px;
+    color: rgba(255,103,23,1.00);
+    font-size: 4rem;
+    width: 20vw;
+    margin: 0 37% 20% 37%;
+    animation: neonBlink 7s infinite;
+}
+/*ボタン*/
+.btn-flat-double-border {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: double 4px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+.btn-flat-double-border:hover {
+    background: #fffbef;
+}
+.link {
+    text-align: center;
+    position: absolute;
+    bottom: 12%;
+    right: 20%;
+    left: 20%;
+    animation: neonBlink 1s infinite;
+	z-index: 999;
+}
+/*show.php	*/
+
+.opacity {
+    top: 10%;
+    opacity: 0.5;
+    right: 48%;
+    left: 16%;
+    z-index: -999;
+    padding-top: 0vh;
+    position: fixed;
+}
+.text_head {
+    font-size: 2vh;
+    color: #fb8b24;
+    text-shadow: 0 0 50px #fb8b24;
+    margin: 4.5vw 4.5vw 0vw 4.5vw;
+}
+.text_head:after {
+    content: attr(data-text);
+    z-index: -1;
+    color: #fb8b24;
+    filter: blur(15px);
+}
+.text_head:before {
+    content: '';
+    background: #fb8b24;
+    z-index: -2;
+    opacity: .3;
+    filter: blur(50px);
+}
+.neon {
+    font-size: 2vh;
+    color: rgba(0,255,0,1.00);
+    text-shadow: 0 0 50px rgba(0,255,0,1.00);
+    margin: 1vw 8vw 5vw;
+}
+.neon:after {
+    content: attr(data-text);
+    z-index: -1;
+    color: rgba(0,255,0,1.00);
+    filter: blur(15px);
+}
+.neon:before {
+    content: '';
+    background: rgba(0,255,0,1.00);
+    z-index: -2;
+    opacity: .3;
+    filter: blur(50px);
+}
+.link_box {
+/*       position: absolute;*/
+    /* bottom: 8%; */
+    display: flex;
+/*    right: 25%;*/
+/*    left: 31%;*/
+    font-size: 1.5vw;
+    margin-bottom: 40px;
+	justify-content: center;
+}
+.link_box p {
+    margin-right: 2vw;
+    margin-left: 2vw;
+
+}
+.link_box p{
+    animation: neonBlink 5s infinite;
+}
+.link_box .seconnd{
+    animation: neonBlink 7s infinite;
+}
+	
+@media screen and (orientation: landscape){
+	.pc_none{
+    display: none;
+
+	}
+		
+		.link{
+    text-align: center;
+    position: absolute;
+    bottom: 12%;
+    right: 5%;
+    animation: neonBlink 1s infinite;
+    z-index: 5;
+    left: 67%;
+	font-size: 2vw;
+		}		
+}
+}
+
+/*ロゴ*/
+
+/*
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Dosis';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+}
+*/
+
+h1 {
+    display: flex;
+    /*  height: 56px;*/
+  
+    color: rgba(255,103,23,1.00);
+    animation: neonBlur 16s infinite;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12vh;
+    position: absolute;
+    left: 23%;
+    font-size: 10vw;
+}
+h1 > span:nth-child(1) {
+    opacity: .7;
+    font-weight: 800;
+}
+h1 > span:nth-child(2) {
+    animation: neonBlink 5s infinite;
+}
+h1 > span:nth-child(3) {
+    opacity: .5;
+}
+h1 > span:nth-child(4) {
+    animation: neonBlink 3s infinite;
+}
+h1 > span:nth-child(5) {
+    animation: neonBlink 2s infinite;
+}
+ @keyframes neonBlink {
+ 0% {
+opacity: 1;
+}
+ 10% {
+opacity: .6;
+}
+ 12% {
+opacity: 1;
+}
+ 15% {
+opacity: .4;
+}
+ 17% {
+opacity: 1;
+}
+ 18% {
+opacity: .3;
+}
+ 19% {
+opacity: 1;
+}
+ 89% {
+opacity: 1;
+}
+ 91% {
+opacity: .7;
+}
+ 94% {
+opacity: 1;
+}
+ 100% {
+opacity: 1;
+}
+}
+ @keyframes neonBlur {
+ 0% {
+text-shadow: 0px 0px 25px rgba(255,69,0,1.00);
+}
+ 50% {
+text-shadow: 0px 0px 75px rgba(255,69,0,1.00);
+filter: blur(0.5px)
+}
+ 100% {
+text-shadow: 0px 0px 25px rgba(255,69,0,1.00);
+}
+}
+
+
+
+/**/
+/*page-load*/
+
+/*page-load*/
+
+/****************************************/
+
+/* ブラウザのスクロールバーを常に表示させることでカクカクッとなるのを防ぐ */
+html{
+  overflow-y:scroll;
+}
+ 
+/* ローディング関係ない部分のCSS */
+.button{
+  background:#222;
+  border:1px solid #222;
+  border-radius:5px;
+  color:#fff;
+  display:block;
+  height:60px;
+  line-height:60px;
+  margin:30px auto;
+  text-align:center;
+  width:600px;
+}
+.button:hover{
+  background:#fff;
+  color:#222;
+}
+img{
+  max-width:100%;
+}
+ 
+
+
+
+/* ローディングの背景部分のCSS */
+.loader{
+  background-color: rgba(0,0,0,1.00);
+  height:100%;
+  left:0;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:99999;
+}
+ 
+/* ローディングのアニメーション部分のCSS (https://projects.lukehaas.me/css-loaders/) */
+.loader-animation,
+.loader-animation:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader-animation {
+  margin: 40vh auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255,103,23,0.5);
+  border-right: 1.1em solid rgba(255,103,23,0.5);
+  border-bottom: 1.1em solid rgba(255,103,23,0.5);
+  border-left: 1.1em solid rgba(255,103,23,1);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
